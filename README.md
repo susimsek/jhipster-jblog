@@ -9,7 +9,7 @@
 # Backend
 
 - Java 8
-- Jhipster 6.1.0
+- Jhipster 6.0.1
 - Spring Boot 2.1.4
 - Spring Boot Starter Web
 - Spring Data Starter JPA
@@ -28,7 +28,7 @@
 # Frontend
 
 - Angular 7.2.12
-- Jhipster 6.1.0
+- Jhipster 6.0.1
 - Yeoman 2.0.6
 - Node 8.15.1
 - Yarn 1.16.0
