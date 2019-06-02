@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { JhiEventManager } from 'ng-jhipster';
-
-import { LoginModalService, AccountService, Account } from 'app/core';
+import { IPost } from 'app/shared/model/post.model';
+import { PostService } from 'app/entities/post';
+import { filter, map } from 'rxjs/operators';
+import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'jhi-home',
@@ -10,35 +10,24 @@ import { LoginModalService, AccountService, Account } from 'app/core';
   styleUrls: ['home.scss']
 })
 export class HomeComponent implements OnInit {
-  account: Account;
-  modalRef: NgbModalRef;
+  posts: IPost[];
+  constructor(private postService: PostService) {}
 
-  constructor(
-    private accountService: AccountService,
-    private loginModalService: LoginModalService,
-    private eventManager: JhiEventManager
-  ) {}
-
+  loadAll() {
+    this.postService
+      .query()
+      .pipe(
+        filter((res: HttpResponse<IPost[]>) => res.ok),
+        map((res: HttpResponse<IPost[]>) => res.body)
+      )
+      .subscribe(
+        (res: IPost[]) => {
+          this.posts = res;
+        },
+        (res: HttpErrorResponse) => console.log(res.message)
+      );
+  }
   ngOnInit() {
-    this.accountService.identity().then((account: Account) => {
-      this.account = account;
-    });
-    this.registerAuthenticationSuccess();
-  }
-
-  registerAuthenticationSuccess() {
-    this.eventManager.subscribe('authenticationSuccess', message => {
-      this.accountService.identity().then(account => {
-        this.account = account;
-      });
-    });
-  }
-
-  isAuthenticated() {
-    return this.accountService.isAuthenticated();
-  }
-
-  login() {
-    this.modalRef = this.loginModalService.open();
+    this.loadAll();
   }
 }
