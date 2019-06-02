@@ -1,4 +1,38 @@
-# jblog
+# JBlog
+
+# Screenshot of the Application
+
+![Spring Boot Task App](./img/app.png?raw=true 'App İmage')
+
+# Technologies Used
+
+# Backend
+
+- Java 8
+- Jhipster 6.1.0
+- Spring Boot 2.1.4
+- Spring Boot Starter Web
+- Spring Data Starter JPA
+- Spring Boot Starter Cache
+- Spring Boot Starter AOP
+- Spring Boot Starter Security
+- Spring Boot Starter Mail
+- H2 Persistence Database
+- Swagger
+- Ehcache
+- Hibernate Cache
+- Maven
+- Spring Dev Tools
+- Spring Actuator
+
+# Frontend
+
+- Angular 7.2.12
+- Jhipster 6.1.0
+- Yeoman 2.0.6
+- Node 8.15.1
+- Yarn 1.16.0
+- Bootstrap 4.3.1
 
 This application was generated using JHipster 6.0.1, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.0.1](https://www.jhipster.tech/documentation-archive/v6.0.1).
 
