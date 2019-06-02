@@ -1,0 +1,37 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.therealdanvega"
+    },
+    "jhipsterVersion": "6.0.1",
+    "applicationType": "monolith",
+    "baseName": "jblog",
+    "packageName": "com.therealdanvega",
+    "packageFolder": "com/therealdanvega",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MzljNWRhNDMzYzhmN2MwZDNlMDgwNjMyYzRiMjNmMDI0ZWZhNTY0Zjg0NzcxOWQxZWNhOTI2ZDc0NjkyZTFkZGE5M2Q3ZWQwNzA3YTA5MzBiMjc2NjU1NTI1N2RhZDE1MjcwMTcxZmM0MjY4OTc2NTAzYTg2ZTNjYjdmNjU3ODY=",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "useSass": true,
+    "clientPackageManager": "yarn",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false
+  }
+}
